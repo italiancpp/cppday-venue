@@ -1,24 +1,29 @@
 <html>
 <head>
 	<title>C++ Day 2020 - ++it</title>
+	<link rel="stylesheet" href="virtual_venue.css">
+	<meta charset="utf-8">
+	<script>
+	  function SwitchTrack(site) {
+		document.getElementById('conference').src = site;
+	  }  
+	</script>
 </head>
 <body>
-	<div>
-	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020')">Track A</a>
-	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-track-2')">Track B</a>
-	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net')">Networking</a>
+	<div class="nav_menu">
+		<img src="logo-header.png" alt="++it"><p>C++ Day 2020</p>
+		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020')">Track A</a>
+		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-track-2')">Track B</a>
+		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net')">Networking</a>
 	</div>	
 	
-	<iframe id="conference" src="https://live.remo.co/e/c-day-2020-hallway-track-and-net" width="100%" height="90%">
-		Ouch! Problem with the browser support. Reach the event at...
+	<div class="conference_container">
+	<iframe id="conference" src="">
+		Ouch! Problem with the browser support. Connect directly at <br>
+		<a href="https://live.remo.co/e/c-day-2020">Track A</a><br>
+		<a href="https://live.remo.co/e/c-day-2020-track-2">Track B</a><br>
+		<a href="https://live.remo.co/e/c-day-2020-hallway-track-and-net">Hallway and networking</a><br>
 	</iframe>
-
-<script>
-  function SwitchTrack(site) {
-	document.getElementById('conference').src = site;
-  }  
-</script>
-	
-
+	</div>
 </body>
 </html>
