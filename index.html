@@ -4,8 +4,14 @@
 	<link rel="stylesheet" href="virtual_venue.css">
 	<meta charset="utf-8">
 	<script>
-	  function SwitchTrack(site) {
+	  function SwitchTrack(site, link) {
 		document.getElementById('conference').src = site;
+		
+		var deactivation = document.getElementsByClassName("nav_link");
+		for (var i = 0; i < deactivation.length; i++) {
+			deactivation[i].className = "nav_link";
+		}
+		document.getElementById(link).className = "nav_link active";
 	  }  
 	</script>
 </head>
@@ -13,9 +19,9 @@
 	<div class="nav_menu">
 		<div class="nav_logo"><img src="logo-header.png" alt="++it"></div>
 		<p>C++ Day 2020</p>
-		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020')">Track A</a>
-		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-track-2')">Track B</a>
-		<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net')">Networking</a>
+		<a href="#" id="TrackA" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020', 'TrackA')" class="nav_link">Track A</a>
+		<a href="#" id="TrackB" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-track-2', 'TrackB')" class="nav_link">Track B</a>
+		<a href="#" id="Hall" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net', 'Hall')" class="nav_link">Networking</a>
 	</div>	
 	
 	<div class="conference_container">
@@ -26,5 +32,7 @@
 		<a href="https://live.remo.co/e/c-day-2020-hallway-track-and-net">Hallway and networking</a><br>
 	</iframe>
 	</div>
+	
+	<script>SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net', 'Hall')</script>
 </body>
 </html>
