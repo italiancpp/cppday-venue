@@ -18,24 +18,35 @@ iframe {
 	vertical-align: middle;
 }
 
-.nav_menu img {
+.nav_menu > * {
+	padding: 14px 16px;
+}
+
+.nav_logo {
+    display: inline-block;
+    overflow: hidden;
 	float: left;
-    max-width: 5%;
-    height: auto;
-	/*padding: 0.5%;*/
+	height: 30px;
+	width: 80px;
+	padding-bottom: 0;
+}
+
+.nav_menu img {
+	max-width:100%;
+	max-height:100%;
 }
 
 .nav_menu p {
 	float: left;
 	padding-left: 1%;	
 	padding-right: 3%;
+	margin: 0;
 }
 
 .nav_menu a {
   float: left;
   display: block;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
