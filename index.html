@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>C++ Day 2020 - ++it</title>
+</head>
+<body>
+	<div>
+	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020')">Track A</a>
+	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-track-2')">Track B</a>
+	<a href="#" onclick="SwitchTrack('https://live.remo.co/e/c-day-2020-hallway-track-and-net')">Networking</a>
+	</div>	
+	
+	<iframe id="conference" src="https://live.remo.co/e/c-day-2020-hallway-track-and-net" width="100%" height="70%">
+		Ouch! Problem with the browser support. Reach the event at...
+	</iframe>
+
+<script>
+  function SwitchTrack(site) {
+	document.getElementById('conference').src = site;
+  }  
+</script>
+	
+
+</body>
+</html>
