@@ -60,8 +60,3 @@ iframe {
   background-color: #1A3770;
   color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.nav_menu .icon {
-  display: none;
-} 
